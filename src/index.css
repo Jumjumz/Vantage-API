@@ -5,3 +5,11 @@
 .bgColor {
     @apply bg-neutral-800
 }
+
+.divSize {
+    @apply w-[55rem] h-[35rem]
+}
+
+.respo {
+    @apply max-[880px]:w-[30rem] max-[880px]:h-[20rem]
+}

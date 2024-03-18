@@ -13,12 +13,13 @@ function Data() {
   useEffect(() => {
     getVantageData(compName).then((data) => {
       setApiData(data);
+      console.log(data);
     });
   }, []);
 
   return (
     <>
-      <div className=" max-[880px]:w-[30rem] max-[880px]:h-[20rem] w-[55rem] h-[35rem] pl-4 pr-4 flex flex-col gap-4 bg-white rounded-2xl shadow-xl shadow-white/15">
+      <div className=" respo divSize pl-4 pr-4 flex flex-col gap-4 bg-white rounded-2xl shadow-xl shadow-white/15">
         <h1 className=" font-mono font-bold text-3xl text-center m-4">
           Stock Data
         </h1>
