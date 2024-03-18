@@ -13,7 +13,6 @@ function Data() {
   useEffect(() => {
     getVantageData(compName).then((data) => {
       setApiData(data);
-      console.log(data);
     });
   }, []);
 
