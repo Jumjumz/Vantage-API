@@ -8,7 +8,7 @@ Chartjs.register(CategoryScale);
 
 function Data() {
   const [apiData, setApiData] = useState([]);
-  const compName = "AMZN";
+  const compName = "MSFT";
   const fetchData = useMemo(() => storeData(apiData), [apiData]);
   useEffect(() => {
     getVantageData(compName).then((data) => {
@@ -28,7 +28,7 @@ function Data() {
             labels: fetchData.getXData,
             datasets: [
               {
-                label: "AMAZON",
+                label: "MICROSOFT",
                 data: fetchData.getYData,
               },
             ],
