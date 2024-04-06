@@ -25,7 +25,7 @@ function Data() {
         </h1>
         <Line
           data={{
-            labels: fetchData.getXData.slice(1, 50),
+            labels: fetchData.getXData.slice(1, 25),
             datasets: [
               {
                 label: "AMAZON",
