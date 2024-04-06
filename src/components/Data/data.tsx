@@ -7,8 +7,8 @@ import { Line } from "react-chartjs-2";
 Chartjs.register(CategoryScale);
 
 function Data() {
-  const [apiData, setApiData] = useState([]);
-  const compName = "MSFT";
+  const [apiData, setApiData] = useState([""]);
+  const compName = "AMZN";
   const fetchData = useMemo(() => storeData(apiData), [apiData]);
   useEffect(() => {
     getVantageData(compName).then((data) => {
@@ -25,11 +25,11 @@ function Data() {
         </h1>
         <Line
           data={{
-            labels: fetchData.getXData,
+            labels: fetchData.getXData.slice(1, 50),
             datasets: [
               {
-                label: "MICROSOFT",
-                data: fetchData.getYData,
+                label: "AMAZON",
+                data: fetchData.getYData.slice(1, 200),
               },
             ],
           }}
