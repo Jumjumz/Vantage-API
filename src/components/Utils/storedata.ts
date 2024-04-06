@@ -1,11 +1,12 @@
 
-export const storeData = (apiData:Object | any) => {
+export const storeData = (apiData:any) => {
+    const INDEX_SEARCH = "Time Series (Daily)";
     const getXData = [''];
     const getYData = [''];
-    for (const key in apiData["Time Series (Daily)"]) {
+    for (const key in apiData[INDEX_SEARCH]) {
         getXData.push(key);
-        getYData.push(apiData["Time Series (Daily)"][key]["2. high"]);
-        console.log(typeof (apiData["Time Series (Daily)"]));
+        getYData.push(apiData[INDEX_SEARCH][key]["2. high"]);
+        console.log(typeof (apiData[INDEX_SEARCH]));
     }
     return {getXData, getYData};
-};
+}
