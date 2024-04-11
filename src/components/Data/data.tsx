@@ -1,10 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { getVantageData } from "../Utils/util";
 import { storeData } from "../Utils/storedata";
-import { CategoryScale, Chart as Chartjs } from "chart.js/auto";
-import { Line } from "react-chartjs-2";
-
-Chartjs.register(CategoryScale);
+import Plot from "react-plotly.js";
 
 function Data() {
   const [apiData, setApiData] = useState([""]);
@@ -25,17 +22,21 @@ function Data() {
         <h1 className=" font-mono font-bold text-3xl text-center m-4">
           Stock Data
         </h1>
-        <Line
-          data={{
-            labels: fetchData.getXData.slice(1, 25),
-            datasets: [
+        <div className=" flex justify-center items-center">
+          <Plot
+            data={[
               {
-                label: LABEL_NAME,
-                data: fetchData.getYData.slice(1, 200),
+                x: fetchData.getXData,
+                y: fetchData.getY1Data,
+                type: "scatter",
+                mode: "lines+marker",
+                marker: { color: "red" },
+                name: { LABEL_NAME },
               },
-            ],
-          }}
-        />
+            ]}
+            layout={{ width: 750, height: 450, title: { LABEL_NAME } }}
+          />
+        </div>
       </div>
     </>
   );
