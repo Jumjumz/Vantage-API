@@ -20,7 +20,7 @@ function Data() {
     <>
       <div className=" respo divSize pl-4 pr-4 flex flex-col gap-4 bg-white rounded-2xl shadow-xl shadow-white/15">
         <h1 className=" font-mono font-bold text-3xl text-center m-4">
-          Stock Data
+          Stock Data of {LABEL_NAME}
         </h1>
         <div className=" flex justify-center items-center">
           <Plot
@@ -29,12 +29,11 @@ function Data() {
                 x: fetchData.getXData,
                 y: fetchData.getY1Data,
                 type: "scatter",
-                mode: "lines+marker",
+                mode: "lines",
                 marker: { color: "red" },
-                name: { LABEL_NAME },
               },
             ]}
-            layout={{ width: 750, height: 450, title: { LABEL_NAME } }}
+            layout={{ width: 750, height: 450 }}
           />
         </div>
       </div>
