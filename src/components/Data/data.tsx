@@ -29,7 +29,7 @@ function Data() {
                 x: fetchData.getXData,
                 y: fetchData.getY1Data,
                 type: "scatter",
-                mode: "lines",
+                mode: "lines+markers",
                 marker: { color: "red" },
               },
             ]}
