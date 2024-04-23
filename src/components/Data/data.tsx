@@ -4,7 +4,7 @@ import { storeData } from "../Utils/storedata";
 import Plot from "react-plotly.js";
 
 function Data() {
-  const [apiData, setApiData] = useState<any>();
+  const [apiData, setApiData] = useState([""]);
   const compName = "AMZN";
   const LABEL_NAME = "AMAZON";
   const fetchData = useMemo(() => storeData(apiData), [apiData]);

@@ -10,7 +10,6 @@ interface ApiData {
     }
 }
 
-
 export const storeData = (apiData:ApiData) => {
     const INDEX_SEARCH  = "Time Series (Daily)";
     const getXData : string[] = [];
