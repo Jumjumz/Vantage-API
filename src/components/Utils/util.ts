@@ -4,6 +4,6 @@ const VITE_API_KEY: string = import.meta.env.VITE_VANTAGE_KEY;
 
 export const getVantageData = async(symbol:string) => {
     const response = await fetch(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${VITE_API_KEY}`);
-    const data: Array<string> = await response.json();
+    const data : any = await response.json();
     return data;
 }
