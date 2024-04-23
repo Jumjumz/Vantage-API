@@ -1,6 +1,6 @@
 
 interface ApiData {
-    "Time Series (Daily)":{
+    "Time Series (Daily)" : {
         [key: string] : {
             "1. open": string;
             "2. high": string;
@@ -13,7 +13,7 @@ interface ApiData {
 
 export const storeData = (apiData:ApiData) => {
     const INDEX_SEARCH  = "Time Series (Daily)";
-    const getXData : string[] = [];
+    const getXData : Array<string> = [];
     const getY1Data : string[] = [];
     const getY2Data : string[] = [];
     const getY3Data : string[] = [];
