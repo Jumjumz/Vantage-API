@@ -13,11 +13,11 @@ interface ApiData {
 
 export const storeData = (apiData:ApiData) => {
     const INDEX_SEARCH  = "Time Series (Daily)";
-    const getXData : Array<string> = [];
-    const getY1Data : string[] = [];
-    const getY2Data : string[] = [];
-    const getY3Data : string[] = [];
-    const getY4Data : string[] = [];
+    const getXData = [''];
+    const getY1Data = [''];
+    const getY2Data = [''];
+    const getY3Data = [''];
+    const getY4Data = [''];
 
     for (const key in apiData[INDEX_SEARCH]) {
         getXData.push(key);
